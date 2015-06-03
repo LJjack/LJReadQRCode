@@ -14,6 +14,7 @@
 		83519A631B1E932000EA0A33 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83519A621B1E932000EA0A33 /* Images.xcassets */; };
 		83519A661B1E932000EA0A33 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83519A641B1E932000EA0A33 /* LaunchScreen.xib */; };
 		83519A721B1E932000EA0A33 /* LJReadQRCodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83519A711B1E932000EA0A33 /* LJReadQRCodeTests.m */; };
+		83519A7D1B1EA32200EA0A33 /* LJReadQRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83519A7C1B1EA32200EA0A33 /* LJReadQRCodeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		83519A6B1B1E932000EA0A33 /* LJReadQRCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LJReadQRCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83519A701B1E932000EA0A33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83519A711B1E932000EA0A33 /* LJReadQRCodeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LJReadQRCodeTests.m; sourceTree = "<group>"; };
+		83519A7B1B1EA32200EA0A33 /* LJReadQRCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJReadQRCodeView.h; sourceTree = "<group>"; };
+		83519A7C1B1EA32200EA0A33 /* LJReadQRCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJReadQRCodeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				83519A5A1B1E932000EA0A33 /* AppDelegate.m */,
 				83519A5C1B1E932000EA0A33 /* ViewController.h */,
 				83519A5D1B1E932000EA0A33 /* ViewController.m */,
+				83519A7B1B1EA32200EA0A33 /* LJReadQRCodeView.h */,
+				83519A7C1B1EA32200EA0A33 /* LJReadQRCodeView.m */,
 				83519A5F1B1E932000EA0A33 /* Main.storyboard */,
 				83519A621B1E932000EA0A33 /* Images.xcassets */,
 				83519A641B1E932000EA0A33 /* LaunchScreen.xib */,
@@ -219,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83519A7D1B1EA32200EA0A33 /* LJReadQRCodeView.m in Sources */,
 				83519A5E1B1E932000EA0A33 /* ViewController.m in Sources */,
 				83519A5B1B1E932000EA0A33 /* AppDelegate.m in Sources */,
 				83519A581B1E932000EA0A33 /* main.m in Sources */,
@@ -297,7 +303,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -332,7 +338,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -344,6 +350,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LJReadQRCode/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -354,6 +361,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LJReadQRCode/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

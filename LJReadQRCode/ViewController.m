@@ -7,18 +7,30 @@
 //
 
 #import "ViewController.h"
-
-@interface ViewController ()
-
+#import "LJReadQRCodeView.h"
+@interface ViewController ()<LJReadQRCodeViewDelegate>
+@property (weak, nonatomic) IBOutlet LJReadQRCodeView *readQRCodeView;
+@property (weak, nonatomic) IBOutlet UILabel *result;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
 }
 
+- (IBAction)scanning:(UIButton *)sender {
+    [self.readQRCodeView setHidden:NO];
+    [self.readQRCodeView readQRCode];
+    [self.readQRCodeView setDelegate:self];
+}
+
+- (void)readQRCodeView:(LJReadQRCodeView *)readQRCodeView result:(NSString *)result
+{
+    [readQRCodeView setHidden:YES];
+    self.result.text = result;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
