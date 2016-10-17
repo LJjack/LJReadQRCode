@@ -16,6 +16,8 @@
 
 @property (strong, nonatomic) AVCaptureSession *session;
 
+@property (weak, nonatomic) IBOutlet UIView *qrView;
+
 @property (weak, nonatomic) IBOutlet UIImageView *scanLineImgView;
 
 @property (weak, nonatomic) IBOutlet UILabel *result;
@@ -66,8 +68,8 @@
     // 3. 设置输出（Metadata元数据）
     AVCaptureMetadataOutput *output = [[AVCaptureMetadataOutput alloc] init];
     
-    CGSize size = self.view.bounds.size;
-    CGRect cropRect = CGRectMake((size.width - 300) * 0.5, (size.height - 300 - self.view.frame.origin.y) * 0.5, 300, 300);
+    CGSize size = self.qrView.bounds.size;
+    CGRect cropRect = CGRectMake((size.width - 300) * 0.5, (size.height - 300 - self.qrView.frame.origin.y) * 0.5, 300, 300);
     CGFloat p1 = size.height/size.width;
     CGFloat p2 = 1920./1080.;  //使用了1080p的图像输出
     if (p1 < p2) {
@@ -104,20 +106,20 @@
     // 5.1 设置preview图层的属性
     [previewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
     // 5.2 设置preview图层的大小
-    [previewLayer setFrame:self.view.bounds];
+    [previewLayer setFrame:self.qrView.bounds];
     // 5.3 将图层添加到视图的图层
-    [self.view.layer insertSublayer:previewLayer atIndex:0];
+    [self.qrView.layer insertSublayer:previewLayer atIndex:0];
     _previewLayer = previewLayer;
     //5.4 加中空蒙版
     CAShapeLayer *shapeLayer = [[CAShapeLayer alloc] init];
     shapeLayer.fillColor = [UIColor colorWithWhite:0.0 alpha:0.7].CGColor;
     shapeLayer.fillRule = kCAFillRuleEvenOdd;
     CGMutablePathRef path = CGPathCreateMutable();
-    CGPathAddRect(path, NULL, self.view.bounds);
+    CGPathAddRect(path, NULL, self.qrView.bounds);
     CGPathAddRect(path, NULL, cropRect);
     shapeLayer.path = path;
     CGPathRelease(path);
-    [self.view.layer addSublayer:shapeLayer];
+    [self.qrView.layer addSublayer:shapeLayer];
     
     // 6. 启动会话
     [session startRunning];

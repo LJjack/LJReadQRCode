@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ReadQR-->
+        <!--二维码/条码-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController title="ReadQR" id="vXZ-lx-hvc" customClass="LJReadQRController" sceneMemberID="viewController">
+                <viewController title="二维码/条码" id="vXZ-lx-hvc" customClass="LJReadQRController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -18,6 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JIt-6K-R9l">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="scan-inRect" translatesAutoresizingMaskIntoConstraints="NO" id="oFE-xg-3kd">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="GHK-Dt-6pG"/>
@@ -30,24 +33,36 @@
                                     <constraint firstAttribute="height" constant="97" id="1sN-Xg-JHF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="将二维码/条码放入框内，即可自动扫描" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7s-L1-hVM">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Ekf-cn-gm3" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="6CO-Rg-9Zn"/>
+                            <constraint firstItem="JIt-6K-R9l" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="Aec-DO-6J8"/>
                             <constraint firstItem="ZZI-e5-Nnf" firstAttribute="centerX" secondItem="oFE-xg-3kd" secondAttribute="centerX" id="QwU-4m-DKz"/>
                             <constraint firstItem="oFE-xg-3kd" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="Sfl-GD-LCV"/>
+                            <constraint firstItem="M7s-L1-hVM" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Tzl-qE-GNX"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="JIt-6K-R9l" secondAttribute="bottom" id="VBq-Zd-9eU"/>
                             <constraint firstItem="ZZI-e5-Nnf" firstAttribute="top" secondItem="oFE-xg-3kd" secondAttribute="top" id="bYj-43-9Wz"/>
+                            <constraint firstItem="JIt-6K-R9l" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="eFa-kE-nvF"/>
+                            <constraint firstItem="M7s-L1-hVM" firstAttribute="top" secondItem="oFE-xg-3kd" secondAttribute="bottom" constant="8" id="ghp-8W-d2N"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Ekf-cn-gm3" secondAttribute="bottom" id="goM-Qf-tSa"/>
                             <constraint firstItem="ZZI-e5-Nnf" firstAttribute="width" secondItem="oFE-xg-3kd" secondAttribute="width" id="j7k-je-cRl"/>
+                            <constraint firstAttribute="trailing" secondItem="JIt-6K-R9l" secondAttribute="trailing" id="mKA-O9-fYg"/>
                             <constraint firstAttribute="trailing" secondItem="Ekf-cn-gm3" secondAttribute="trailing" constant="16" id="uNW-zr-prQ"/>
                             <constraint firstItem="oFE-xg-3kd" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="zHX-GD-HT8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hNb-7b-2Vh"/>
                     <connections>
+                        <outlet property="qrView" destination="JIt-6K-R9l" id="UK1-yO-eYO"/>
                         <outlet property="result" destination="Ekf-cn-gm3" id="cew-MF-oaa"/>
                         <outlet property="scanLineImgView" destination="ZZI-e5-Nnf" id="qpH-9K-Lrf"/>
                     </connections>
@@ -73,6 +88,19 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fRv-Hg-8cG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="149.59999999999999" y="278.41079460269867"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="uc6-Qw-epE">
+            <objects>
+                <viewController id="g4L-nJ-HlO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="usN-C9-BFf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e6j-fR-jJO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>
