@@ -21,7 +21,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rio-We-ffb" customClass="LJReadQRCodeView">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="272-vp-XT0"/>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ekf-cn-gm3">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="97" id="1sN-Xg-JHF"/>
@@ -30,53 +29,26 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O8b-sd-05H">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O8b-sd-05H">
                                 <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="cor1" translatesAutoresizingMaskIntoConstraints="NO" id="Lxz-Uc-9Gu">
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="scan-inRect" translatesAutoresizingMaskIntoConstraints="NO" id="oFE-xg-3kd"/>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="scan-line" translatesAutoresizingMaskIntoConstraints="NO" id="ZZI-e5-Nnf">
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="Rwv-Yn-tBG"/>
-                                            <constraint firstAttribute="height" constant="40" id="bHa-RU-QLM"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="cor2" translatesAutoresizingMaskIntoConstraints="NO" id="guT-Gn-Ezm">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="6e3-A4-2Rc"/>
-                                            <constraint firstAttribute="width" constant="40" id="UYa-od-GPQ"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="cor4" translatesAutoresizingMaskIntoConstraints="NO" id="Bev-gh-EmJ">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="VAd-Zl-xea"/>
-                                            <constraint firstAttribute="width" constant="40" id="ba4-hn-vuV"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="cor3" translatesAutoresizingMaskIntoConstraints="NO" id="oFE-xg-3kd">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="nRb-jv-WhI"/>
-                                            <constraint firstAttribute="width" constant="40" id="u3H-hg-T8k"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="QRCodeScanLine" translatesAutoresizingMaskIntoConstraints="NO" id="ZZI-e5-Nnf">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="12" id="NA8-Z1-Vel"/>
+                                            <constraint firstAttribute="height" constant="5" id="NA8-Z1-Vel"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="1fJ-PQ-mkm"/>
-                                    <constraint firstAttribute="bottom" secondItem="Bev-gh-EmJ" secondAttribute="bottom" id="59s-I4-mhm"/>
-                                    <constraint firstAttribute="trailing" secondItem="guT-Gn-Ezm" secondAttribute="trailing" id="5OV-27-Rib"/>
+                                    <constraint firstItem="oFE-xg-3kd" firstAttribute="leading" secondItem="O8b-sd-05H" secondAttribute="leading" id="1r7-pn-r93"/>
+                                    <constraint firstAttribute="bottom" secondItem="oFE-xg-3kd" secondAttribute="bottom" id="KU0-ZA-V2f"/>
+                                    <constraint firstAttribute="trailing" secondItem="oFE-xg-3kd" secondAttribute="trailing" id="OLa-Fe-4eL"/>
                                     <constraint firstAttribute="height" constant="300" id="SRA-xv-ItT"/>
+                                    <constraint firstItem="oFE-xg-3kd" firstAttribute="top" secondItem="O8b-sd-05H" secondAttribute="top" id="SkL-G7-1b2"/>
                                     <constraint firstAttribute="trailing" secondItem="ZZI-e5-Nnf" secondAttribute="trailing" id="WSK-Ki-ZlR"/>
                                     <constraint firstItem="ZZI-e5-Nnf" firstAttribute="leading" secondItem="O8b-sd-05H" secondAttribute="leading" id="XzY-s4-Mfs"/>
-                                    <constraint firstAttribute="bottom" secondItem="oFE-xg-3kd" secondAttribute="bottom" id="Y9b-8x-D1y"/>
-                                    <constraint firstItem="Bev-gh-EmJ" firstAttribute="leading" secondItem="O8b-sd-05H" secondAttribute="leading" id="YJs-lV-IMz"/>
-                                    <constraint firstItem="guT-Gn-Ezm" firstAttribute="top" secondItem="O8b-sd-05H" secondAttribute="top" id="fOJ-5I-86j"/>
-                                    <constraint firstItem="Lxz-Uc-9Gu" firstAttribute="top" secondItem="O8b-sd-05H" secondAttribute="top" id="iAt-cT-KuX"/>
                                     <constraint firstItem="ZZI-e5-Nnf" firstAttribute="top" secondItem="O8b-sd-05H" secondAttribute="top" id="lyR-iN-ojw"/>
-                                    <constraint firstItem="Lxz-Uc-9Gu" firstAttribute="leading" secondItem="O8b-sd-05H" secondAttribute="leading" id="t16-mg-O7Y"/>
-                                    <constraint firstAttribute="trailing" secondItem="oFE-xg-3kd" secondAttribute="trailing" id="uIJ-mg-FE0"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -84,17 +56,13 @@
                         <constraints>
                             <constraint firstItem="Ekf-cn-gm3" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="6CO-Rg-9Zn"/>
                             <constraint firstItem="Rio-We-ffb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="6OR-XX-1Ro"/>
-                            <constraint firstItem="272-vp-XT0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="E90-kg-bWa"/>
                             <constraint firstItem="O8b-sd-05H" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="WTu-Q4-BAp"/>
                             <constraint firstItem="O8b-sd-05H" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="c9B-cz-IeM"/>
-                            <constraint firstAttribute="trailing" secondItem="272-vp-XT0" secondAttribute="trailing" id="d0A-dn-lUm"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Ekf-cn-gm3" secondAttribute="bottom" id="goM-Qf-tSa"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Rio-We-ffb" secondAttribute="bottom" id="hPm-8L-6yk"/>
-                            <constraint firstItem="272-vp-XT0" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="kKd-fx-1yJ"/>
                             <constraint firstItem="Rio-We-ffb" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="plZ-Wi-c0h"/>
                             <constraint firstAttribute="trailing" secondItem="Rio-We-ffb" secondAttribute="trailing" id="rrZ-ja-4NH"/>
                             <constraint firstAttribute="trailing" secondItem="Ekf-cn-gm3" secondAttribute="trailing" constant="16" id="uNW-zr-prQ"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="272-vp-XT0" secondAttribute="bottom" id="uVt-0g-Ncf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hNb-7b-2Vh"/>
@@ -129,10 +97,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="QRCodeScanLine" width="320" height="12"/>
-        <image name="cor1" width="160" height="160"/>
-        <image name="cor2" width="160" height="160"/>
-        <image name="cor3" width="160" height="160"/>
-        <image name="cor4" width="160" height="160"/>
+        <image name="scan-inRect" width="35" height="35"/>
+        <image name="scan-line" width="252" height="5"/>
     </resources>
 </document>

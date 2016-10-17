@@ -6,11 +6,12 @@
     },
     {
       "idiom" : "universal",
-      "scale" : "2x",
-      "filename" : "QRCodeScanLine@2x.png"
+      "filename" : "scan-line@2x.png",
+      "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "scan-line@3x.png",
       "scale" : "3x"
     }
   ],

@@ -34,7 +34,7 @@
     AVCaptureMetadataOutput *output = [[AVCaptureMetadataOutput alloc] init];
     
     CGSize size = self.bounds.size;
-    CGRect cropRect = CGRectMake((size.width - 300) * 0.5, (size.height - 300) * 0.5, 300, 300);
+    CGRect cropRect = CGRectMake((size.width - 300) * 0.5, (size.height - 300 - self.frame.origin.y) * 0.5, 300, 300);
     CGFloat p1 = size.height/size.width;
     CGFloat p2 = 1920./1080.;  //使用了1080p的图像输出
     if (p1 < p2) {
@@ -74,6 +74,17 @@
     [preview setFrame:self.bounds];
     // 5.3 将图层添加到视图的图层
     [self.layer insertSublayer:preview atIndex:0];
+    
+    //5.4 加中空蒙版
+    CAShapeLayer *shapeLayer = [[CAShapeLayer alloc] init];
+    shapeLayer.fillColor = [UIColor colorWithWhite:0.0 alpha:0.7].CGColor;
+    shapeLayer.fillRule = kCAFillRuleEvenOdd;
+    CGMutablePathRef path = CGPathCreateMutable();
+    CGPathAddRect(path, NULL, self.bounds);
+    CGPathAddRect(path, NULL, cropRect);
+    shapeLayer.path = path;
+    CGPathRelease(path);
+    [self.layer addSublayer:shapeLayer];
     _preview = preview;
     // 6. 启动会话
     [session startRunning];

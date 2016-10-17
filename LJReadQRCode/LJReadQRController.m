@@ -35,7 +35,6 @@
 }
 
 - (void)moveScanLine {
-    
     CABasicAnimation *scanNetAnimation = [CABasicAnimation animation];
     scanNetAnimation.keyPath = @"transform.translation.y";
     scanNetAnimation.byValue = @(300);
