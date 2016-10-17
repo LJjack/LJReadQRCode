@@ -18,9 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rio-We-ffb" customClass="LJReadQRCodeView">
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="scan-inRect" translatesAutoresizingMaskIntoConstraints="NO" id="oFE-xg-3kd">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="GHK-Dt-6pG"/>
+                                    <constraint firstAttribute="height" constant="300" id="w8V-Za-zNF"/>
+                                </constraints>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="scan-line" translatesAutoresizingMaskIntoConstraints="NO" id="ZZI-e5-Nnf"/>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ekf-cn-gm3">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="97" id="1sN-Xg-JHF"/>
@@ -29,46 +33,21 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O8b-sd-05H">
-                                <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="scan-inRect" translatesAutoresizingMaskIntoConstraints="NO" id="oFE-xg-3kd"/>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="scan-line" translatesAutoresizingMaskIntoConstraints="NO" id="ZZI-e5-Nnf">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="5" id="NA8-Z1-Vel"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="1fJ-PQ-mkm"/>
-                                    <constraint firstItem="oFE-xg-3kd" firstAttribute="leading" secondItem="O8b-sd-05H" secondAttribute="leading" id="1r7-pn-r93"/>
-                                    <constraint firstAttribute="bottom" secondItem="oFE-xg-3kd" secondAttribute="bottom" id="KU0-ZA-V2f"/>
-                                    <constraint firstAttribute="trailing" secondItem="oFE-xg-3kd" secondAttribute="trailing" id="OLa-Fe-4eL"/>
-                                    <constraint firstAttribute="height" constant="300" id="SRA-xv-ItT"/>
-                                    <constraint firstItem="oFE-xg-3kd" firstAttribute="top" secondItem="O8b-sd-05H" secondAttribute="top" id="SkL-G7-1b2"/>
-                                    <constraint firstAttribute="trailing" secondItem="ZZI-e5-Nnf" secondAttribute="trailing" id="WSK-Ki-ZlR"/>
-                                    <constraint firstItem="ZZI-e5-Nnf" firstAttribute="leading" secondItem="O8b-sd-05H" secondAttribute="leading" id="XzY-s4-Mfs"/>
-                                    <constraint firstItem="ZZI-e5-Nnf" firstAttribute="top" secondItem="O8b-sd-05H" secondAttribute="top" id="lyR-iN-ojw"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Ekf-cn-gm3" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="6CO-Rg-9Zn"/>
-                            <constraint firstItem="Rio-We-ffb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="6OR-XX-1Ro"/>
-                            <constraint firstItem="O8b-sd-05H" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="WTu-Q4-BAp"/>
-                            <constraint firstItem="O8b-sd-05H" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="c9B-cz-IeM"/>
+                            <constraint firstItem="ZZI-e5-Nnf" firstAttribute="centerX" secondItem="oFE-xg-3kd" secondAttribute="centerX" id="QwU-4m-DKz"/>
+                            <constraint firstItem="oFE-xg-3kd" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="Sfl-GD-LCV"/>
+                            <constraint firstItem="ZZI-e5-Nnf" firstAttribute="top" secondItem="oFE-xg-3kd" secondAttribute="top" id="bYj-43-9Wz"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Ekf-cn-gm3" secondAttribute="bottom" id="goM-Qf-tSa"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Rio-We-ffb" secondAttribute="bottom" id="hPm-8L-6yk"/>
-                            <constraint firstItem="Rio-We-ffb" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="plZ-Wi-c0h"/>
-                            <constraint firstAttribute="trailing" secondItem="Rio-We-ffb" secondAttribute="trailing" id="rrZ-ja-4NH"/>
+                            <constraint firstItem="ZZI-e5-Nnf" firstAttribute="width" secondItem="oFE-xg-3kd" secondAttribute="width" id="j7k-je-cRl"/>
                             <constraint firstAttribute="trailing" secondItem="Ekf-cn-gm3" secondAttribute="trailing" constant="16" id="uNW-zr-prQ"/>
+                            <constraint firstItem="oFE-xg-3kd" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="zHX-GD-HT8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hNb-7b-2Vh"/>
                     <connections>
-                        <outlet property="centerView" destination="O8b-sd-05H" id="1it-gm-ONF"/>
-                        <outlet property="readQRCodeView" destination="Rio-We-ffb" id="agv-g0-9ev"/>
                         <outlet property="result" destination="Ekf-cn-gm3" id="cew-MF-oaa"/>
                         <outlet property="scanLineImgView" destination="ZZI-e5-Nnf" id="qpH-9K-Lrf"/>
                     </connections>
