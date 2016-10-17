@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LJReadQRController.h
 //  LJReadQRCode
 //
 //  Created by liujunjie on 15-6-3.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface LJReadQRController : UIViewController
 
 
 @end
